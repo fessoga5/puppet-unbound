@@ -70,7 +70,7 @@ class unbound (
   concat { $config_file:
     notify  => Service[$service_name],
     require => Package[$package_name],
-    force => True,
+    force => true,
   }
 
   concat::fragment { 'unbound-header':
